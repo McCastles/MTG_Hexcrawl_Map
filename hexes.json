@@ -1,578 +1,1586 @@
 [
   {
     "id": "A1",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      true,
+      false,
+      true,
+      false,
+      true
+    ]
   },
   {
     "id": "A2",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "A3",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "A4",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "A5",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "A6",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "A7",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "A8",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "A9",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "A10",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "A11",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "A12",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "A13",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "A14",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "A15",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "A16",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "B1",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "B2",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "B3",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "B4",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "B5",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "B6",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "B7",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "B8",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "B9",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "B10",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "B11",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "B12",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "B13",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "B14",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "B15",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "B16",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "C1",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "C2",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "C3",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "C4",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "C5",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "C6",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "C7",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "C8",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "C9",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "C10",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "C11",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "C12",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "C13",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "C14",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "C15",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "C16",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "D1",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "D2",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "D3",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "D4",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "D5",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "D6",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "D7",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "D8",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "D9",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "D10",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "D11",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "D12",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "D13",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "D14",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "D15",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "D16",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "E1",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "E2",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "E3",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "E4",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "E5",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "E6",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "E7",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "E8",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "E9",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "E10",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "E11",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "E12",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "E13",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "E14",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "E15",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "E16",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "F1",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "F2",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "F3",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "F4",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "F5",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "F6",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "F7",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "F8",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "F9",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "F10",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "F11",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "F12",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "F13",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "F14",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "F15",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "F16",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "G1",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "G2",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "G3",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "G4",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "G5",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "G6",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "G7",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "G8",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "G9",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "G10",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "G11",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "G12",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "G13",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "G14",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "G15",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "G16",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "H1",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "H2",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "H3",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "H4",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "H5",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "H6",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "H7",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "H8",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "H9",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "H10",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "H11",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "H12",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "H13",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "H14",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "H15",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "H16",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "I1",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "I2",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "I3",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "I4",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "I5",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "I6",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "I7",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "I8",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "I9",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "I10",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "I11",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "I12",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "I13",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "I14",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "I15",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   },
   {
     "id": "I16",
-    "color": "#808080"
+    "color": "#808080",
+    "mana": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
   }
 ]

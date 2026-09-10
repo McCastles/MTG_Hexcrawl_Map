@@ -1,15 +1,24 @@
 const grid = document.getElementById('hex-grid');
 const svg = document.getElementById('hex-outline-layer');
 const colorInput = document.getElementById('hex-color-input');
+const textInput = document.getElementById('hex-text-input');
+const textInput2 = document.getElementById('hex-text-input-2');
+const themeToggle = document.getElementById('theme-toggle');
 const selectedHexLabel = document.getElementById('selected-hex-label');
+const manaCheckboxes = Array.from(document.querySelectorAll('.mana-checkbox-input'));
+const manaOptionIcons = Array.from(document.querySelectorAll('.mana-icon-option'));
 
 const columns = 16;
 const rows = 9;
 const rowLetters = Array.from({ length: rows }, (_, index) => String.fromCharCode(65 + index));
 const storageKey = 'mtg_hexcrawl_map_hexes';
+const themeStorageKey = 'mtg_hexcrawl_map_theme';
+const manaIconPaths = ['icons/W.png', 'icons/U.png', 'icons/B.png', 'icons/R.png', 'icons/G.png'];
+const manaOptionCount = 6;
 
 let hexes = [];
 let selectedHexId = 'A1';
+let manaIcons = [];
 
 function getHexFillColor(color) {
   const trimmedColor = String(color || '#808080').trim();
@@ -39,8 +48,17 @@ function buildDefaultHexes() {
     Array.from({ length: columns }, (_, colIndex) => ({
       id: `${rowLetter}${colIndex + 1}`,
       color: '#808080',
+      text: '',
+      text2: '',
+      mana: Array(manaOptionCount).fill(false),
     }))
   );
+}
+
+async function loadManaIcons() {
+  manaIcons = manaIconPaths;
+  updateManaIconSprites();
+  return manaIcons;
 }
 
 function normalizeHexes(data) {
@@ -48,12 +66,27 @@ function normalizeHexes(data) {
     .map((hex) => ({
       id: String(hex?.id || '').trim().toUpperCase(),
       color: String(hex?.color || '#808080').trim(),
+      text: typeof hex?.text === 'string' ? hex.text : '',
+      text2: typeof hex?.text2 === 'string' ? hex.text2 : '',
+      mana: Array.isArray(hex?.mana)
+        ? Array.from({ length: manaOptionCount }, (_, index) => Boolean(hex.mana[index]))
+        : Array(manaOptionCount).fill(false),
     }))
     .filter((hex) => hex.id);
 
   const lookup = new Map(normalized.map((hex) => [hex.id, hex]));
 
-  return buildDefaultHexes().map((defaultHex) => lookup.get(defaultHex.id) || defaultHex);
+  return buildDefaultHexes().map((defaultHex) => {
+    const existingHex = lookup.get(defaultHex.id);
+
+    return {
+      id: defaultHex.id,
+      color: existingHex?.color || defaultHex.color,
+      text: typeof existingHex?.text === 'string' ? existingHex.text : defaultHex.text,
+      text2: typeof existingHex?.text2 === 'string' ? existingHex.text2 : defaultHex.text2,
+      mana: Array.from({ length: manaOptionCount }, (_, index) => Boolean(existingHex?.mana?.[index] ?? false)),
+    };
+  });
 }
 
 function updateSelectedHexDisplay() {
@@ -65,6 +98,12 @@ function updateSelectedHexDisplay() {
 
   selectedHexLabel.textContent = selectedHex.id;
   colorInput.value = selectedHex.color;
+  textInput.value = selectedHex.text || '';
+  textInput2.value = selectedHex.text2 || '';
+
+  manaCheckboxes.forEach((checkbox, index) => {
+    checkbox.checked = Boolean(selectedHex.mana?.[index]);
+  });
 }
 
 function createHexButtons() {
@@ -74,12 +113,12 @@ function createHexButtons() {
 
   const hexWidth = Math.min(frameWidth / 14.75, frameHeight / 9.5);
   const hexHeight = hexWidth * (Math.sqrt(3) / 2);
-  const xStep = hexWidth * 0.777;
-  const yStep = hexHeight * 0.54;
+  const xStep = hexWidth * 0.735;
+  const yStep = hexHeight * 0.471;
   const rise = hexHeight * 0.5;
 
-  const originX = 83;
-  const originY = 111;
+  const originX = 101;
+  const originY = 103.5;
 
   grid.innerHTML = '';
   svg.innerHTML = '';
@@ -146,6 +185,24 @@ function saveHexes() {
   localStorage.setItem(storageKey, JSON.stringify(hexes, null, 2));
 }
 
+function applyTheme(theme) {
+  document.body.dataset.theme = theme;
+  themeToggle.textContent = theme === 'dark' ? '☀️ Light mode' : '🌙 Dark mode';
+  themeToggle.setAttribute('aria-pressed', String(theme === 'dark'));
+  localStorage.setItem(themeStorageKey, theme);
+}
+
+function updateManaIconSprites() {
+  manaOptionIcons.forEach((icon, index) => {
+    const iconPath = manaIcons[index];
+
+    icon.style.backgroundImage = iconPath ? `url("${iconPath}")` : 'none';
+    icon.style.backgroundRepeat = 'no-repeat';
+    icon.style.backgroundSize = 'contain';
+    icon.style.backgroundPosition = 'center';
+  });
+}
+
 function applySelectedHexColor() {
   const selectedHex = hexes.find((hex) => hex.id === selectedHexId);
 
@@ -157,6 +214,37 @@ function applySelectedHexColor() {
   saveHexes();
   updateSelectedHexDisplay();
   createHexButtons();
+}
+
+function applySelectedHexText() {
+  const selectedHex = hexes.find((hex) => hex.id === selectedHexId);
+
+  if (!selectedHex) {
+    return;
+  }
+
+  selectedHex.text = textInput.value;
+  saveHexes();
+}
+
+function applySelectedHexText2() {
+  const selectedHex = hexes.find((hex) => hex.id === selectedHexId);
+
+  if (!selectedHex) {
+    return;
+  }
+
+  selectedHex.text2 = textInput2.value;
+  saveHexes();
+}
+
+async function syncEditorPanelHeight() {
+  const frame = document.querySelector('.frame');
+  const panel = document.querySelector('.color-panel');
+
+  if (frame && panel) {
+    panel.style.height = `${frame.clientHeight}px`;
+  }
 }
 
 async function loadHexes() {
@@ -181,13 +269,44 @@ async function loadHexes() {
     console.warn('Falling back to generated default hex colors.', error);
   }
 
+  await loadManaIcons();
   selectedHexId = hexes[0]?.id || 'A1';
   saveHexes();
   updateSelectedHexDisplay();
   createHexButtons();
+  syncEditorPanelHeight();
 }
 
 colorInput.addEventListener('input', applySelectedHexColor);
-window.addEventListener('resize', createHexButtons);
+textInput.addEventListener('input', applySelectedHexText);
+textInput2.addEventListener('input', applySelectedHexText2);
+
+manaCheckboxes.forEach((checkbox) => {
+  checkbox.addEventListener('change', () => {
+    const selectedHex = hexes.find((hex) => hex.id === selectedHexId);
+
+    if (!selectedHex) {
+      return;
+    }
+
+    const manaIndex = Number(checkbox.dataset.manaIndex || 0);
+    selectedHex.mana = selectedHex.mana || Array(manaOptionCount).fill(false);
+    selectedHex.mana[manaIndex] = checkbox.checked;
+    saveHexes();
+  });
+});
+
+window.addEventListener('resize', () => {
+  createHexButtons();
+  syncEditorPanelHeight();
+});
+
+const savedTheme = localStorage.getItem(themeStorageKey) || 'light';
+applyTheme(savedTheme);
+
+themeToggle.addEventListener('click', () => {
+  const nextTheme = document.body.dataset.theme === 'dark' ? 'light' : 'dark';
+  applyTheme(nextTheme);
+});
 
 loadHexes();

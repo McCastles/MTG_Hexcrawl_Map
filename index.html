@@ -6,7 +6,13 @@
     <title>MTG Hexcrawl Map</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body data-theme="light">
+    <div class="theme-bar">
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+        🌙 Dark mode
+      </button>
+    </div>
+
     <div class="page">
       <div class="frame">
         <div class="map-layer" aria-label="Map background"></div>
@@ -14,15 +20,55 @@
         <div id="hex-grid" aria-label="Hex map buttons"></div>
       </div>
 
-      <aside class="color-panel" aria-label="Hex color editor panel">
-        <h1>Hex color editor</h1>
+      <aside class="color-panel" aria-label="Hex editor panel">
         <div class="selected-hex-row">
-          <span class="panel-label">Selected hex</span>
           <strong id="selected-hex-label">A1</strong>
         </div>
 
-        <label class="panel-label" for="hex-color-input">Hex color</label>
-        <input id="hex-color-input" type="text" value="#808080" placeholder="#RRGGBB or rgba(...)">
+        <input id="hex-color-input" type="text" value="#808080" placeholder="#RRGGBB or rgba(...)" />
+
+        <div class="textareas-row">
+          <textarea
+            id="hex-text-input"
+            class="hex-textarea"
+            placeholder="Paste multiline text here"
+          ></textarea>
+
+          <textarea
+            id="hex-text-input-2"
+            class="hex-textarea"
+            placeholder="Second multiline text"
+          ></textarea>
+        </div>
+
+        <div class="mana-editor">
+          <div class="mana-checkboxes" aria-label="Mana icon checkboxes">
+            <label class="mana-option">
+              <input class="mana-checkbox-input" type="checkbox" data-mana-index="0" />
+              <span class="mana-icon-option"></span>
+            </label>
+            <label class="mana-option">
+              <input class="mana-checkbox-input" type="checkbox" data-mana-index="1" />
+              <span class="mana-icon-option"></span>
+            </label>
+            <label class="mana-option">
+              <input class="mana-checkbox-input" type="checkbox" data-mana-index="2" />
+              <span class="mana-icon-option"></span>
+            </label>
+            <label class="mana-option">
+              <input class="mana-checkbox-input" type="checkbox" data-mana-index="3" />
+              <span class="mana-icon-option"></span>
+            </label>
+            <label class="mana-option">
+              <input class="mana-checkbox-input" type="checkbox" data-mana-index="4" />
+              <span class="mana-icon-option"></span>
+            </label>
+            <label class="mana-option stash-option">
+              <input class="mana-checkbox-input" type="checkbox" data-mana-index="5" />
+              <span class="stash-label">Stash</span>
+            </label>
+          </div>
+        </div>
       </aside>
     </div>
 
