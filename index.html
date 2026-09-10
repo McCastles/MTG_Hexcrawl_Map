@@ -10,8 +10,20 @@
     <div class="page">
       <div class="frame">
         <div class="map-layer" aria-label="Map background"></div>
+        <svg id="hex-outline-layer" aria-hidden="true"></svg>
         <div id="hex-grid" aria-label="Hex map buttons"></div>
       </div>
+
+      <aside class="color-panel" aria-label="Hex color editor panel">
+        <h1>Hex color editor</h1>
+        <div class="selected-hex-row">
+          <span class="panel-label">Selected hex</span>
+          <strong id="selected-hex-label">A1</strong>
+        </div>
+
+        <label class="panel-label" for="hex-color-input">Hex color</label>
+        <input id="hex-color-input" type="text" value="#808080" placeholder="#RRGGBB or rgba(...)">
+      </aside>
     </div>
 
     <script src="script.js"></script>

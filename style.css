@@ -1,7 +1,7 @@
 :root {
   --hex-fill: transparent;
   --hex-border: #000000;
-  --hex-hover: rgba(255, 255, 255, 0.08);
+  --hex-hover: rgba(80, 220, 120, 0.55);
   --hex-focus: rgba(0, 0, 0, 0.85);
 }
 
@@ -21,10 +21,13 @@ body {
 
 body {
   display: flex;
+  min-height: 100vh;
 }
 
 .page {
-  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
   width: 100vw;
   height: 100vh;
   padding: 10px 10px 30px 10px;
@@ -34,17 +37,18 @@ body {
 
 .frame {
   position: relative;
-  width: min(calc(100vw - 40px), calc((100vh - 50px) * 6591 / 5103));
+  width: min(calc(100vw - 260px), calc((100vh - 50px) * 6591 / 5103));
   aspect-ratio: 6591 / 5103;
   border: 4px solid #ffffff;
   background: #000;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .map-layer {
   position: absolute;
   inset: 0;
-  background-image: url("map.jpg");
+  background-image: url("map2.jpg");
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
@@ -55,10 +59,34 @@ body {
   inset: 0;
 }
 
+#hex-outline-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.hex-outline {
+  fill: rgba(128, 128, 128, 0.4);
+  stroke: rgba(0, 0, 0, 0.85);
+  stroke-width: 0;
+  vector-effect: non-scaling-stroke;
+  stroke-linejoin: round;
+}
+
+.hex-label {
+  font-size: 10px;
+  font-weight: bold;
+  text-anchor: middle;
+  dominant-baseline: middle;
+  fill: #000000;
+  pointer-events: none;
+}
+
 .hex-button {
   position: absolute;
-  /* background: transparent; */
-  background: black;
+  background: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
@@ -67,19 +95,12 @@ body {
   transition: background-color 0.15s ease, transform 0.15s ease;
 }
 
-.hex-button::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: transparent;
-  border: none;
-  /* border: 3px solid var(--hex-border); */
-  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-  pointer-events: none;
-}
-
 .hex-button:hover {
   background: var(--hex-hover);
+}
+
+.hex-button.is-selected {
+  box-shadow: inset 0 0 0 3px rgba(0, 0, 0, 0.9);
 }
 
 .hex-button:active {
@@ -89,4 +110,61 @@ body {
 .hex-button:focus-visible {
   outline: 3px solid var(--hex-focus);
   outline-offset: 2px;
+}
+
+.color-panel {
+  width: 220px;
+  padding: 18px 16px;
+  border: 4px solid #ffffff;
+  background: rgba(17, 17, 17, 0.96);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.color-panel h1 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.selected-hex-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.panel-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+#selected-hex-label {
+  font-size: 1rem;
+}
+
+#hex-color-input {
+  width: 100%;
+  height: 42px;
+  border: 2px solid #ffffff;
+  background: #111111;
+  color: #ffffff;
+  padding: 8px 10px;
+  font-size: 0.95rem;
+}
+
+#apply-color-button {
+  border: 2px solid #ffffff;
+  background: #ffffff;
+  color: #000000;
+  font-weight: 700;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+
+#apply-color-button:hover {
+  background: #d7d7d7;
 }
