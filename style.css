@@ -64,26 +64,40 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  gap: 8px;
   padding: 10px 12px 0;
   background: var(--page-bg);
 }
 
+.mini-toggle,
 .theme-toggle {
   border: 2px solid var(--toggle-border);
   background: var(--toggle-bg);
   color: var(--toggle-text);
   border-radius: 999px;
-  padding: 8px 16px;
-  font-size: 0.9rem;
-  font-weight: 700;
   cursor: pointer;
   transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
 }
 
+.mini-toggle {
+  padding: 6px 10px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.theme-toggle {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.mini-toggle:hover,
 .theme-toggle:hover {
   background: var(--toggle-hover);
 }
 
+.mini-toggle:active,
 .theme-toggle:active {
   transform: translateY(1px);
 }
@@ -147,6 +161,13 @@ body {
   dominant-baseline: middle;
   fill: #ffffff;
   pointer-events: none;
+  white-space: pre;
+}
+
+body.hexes-hidden .hex-button,
+body.hexes-hidden #hex-outline-layer {
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .hex-button {
@@ -157,7 +178,7 @@ body {
   padding: 0;
   margin: 0;
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-  transition: background-color 0.15s ease, transform 0.15s ease;
+  transition: background-color 0.15s ease, transform 0.15s ease, visibility 0.15s ease;
   z-index: 1;
 }
 
@@ -213,6 +234,17 @@ body {
   color: var(--panel-text);
 }
 
+.hex-name-input {
+  width: 120px;
+  min-width: 0;
+  height: 32px;
+  padding: 6px 8px;
+  border: 2px solid var(--control-border);
+  background: var(--control-bg);
+  color: var(--control-text);
+  font-size: 0.9rem;
+}
+
 #hex-color-input {
   width: 100%;
   height: 42px;
@@ -230,7 +262,7 @@ body {
   min-height: 0;
 }
 
-.hex-textarea {
+#hex-text-input {
   flex: 1 1 0;
   width: 100%;
   min-height: 0;
@@ -241,11 +273,93 @@ body {
   padding: 10px 12px;
   font-size: 0.95rem;
   line-height: 1.4;
+  height: 100%;
 }
 
-#hex-text-input,
-#hex-text-input-2 {
-  height: 100%;
+.right-text-stack {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 0;
+}
+
+.hex-textarea {
+  width: 100%;
+  border: 2px solid var(--control-border);
+  background: var(--textarea-bg);
+  color: var(--textarea-text);
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+#hex-text-input-top {
+  min-height: 42px;
+  height: 42px;
+  resize: none;
+}
+
+.challenge-box {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 120px;
+  border: 2px solid var(--control-border);
+  background: var(--textarea-bg);
+  color: var(--textarea-text);
+  padding: 10px;
+}
+
+.challenge-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.challenge-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.challenge-check-input {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: var(--control-border);
+}
+
+.challenge-name-input {
+  flex: 1 1 auto;
+  min-width: 0;
+  border: 1px solid var(--control-border);
+  background: var(--control-bg);
+  color: var(--control-text);
+  padding: 6px 8px;
+  font-size: 0.85rem;
+}
+
+.challenge-remove-button,
+.challenge-add-button {
+  border: 1px solid var(--control-border);
+  background: var(--toggle-bg);
+  color: var(--toggle-text);
+  border-radius: 6px;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.challenge-remove-button {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+}
+
+.challenge-add-button {
+  align-self: flex-start;
+  padding: 6px 10px;
 }
 
 .mana-editor {

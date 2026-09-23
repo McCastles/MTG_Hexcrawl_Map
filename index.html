@@ -8,6 +8,18 @@
   </head>
   <body data-theme="light">
     <div class="theme-bar">
+      <button
+        id="hex-visibility-toggle"
+        class="mini-toggle"
+        type="button"
+        aria-label="Toggle hex visibility"
+        aria-pressed="false"
+      >
+        Hide hexes
+      </button>
+      <button id="save-json-button" class="mini-toggle" type="button">Save JSON</button>
+      <button id="load-json-button" class="mini-toggle" type="button">Load JSON</button>
+      <input id="load-json-input" type="file" accept="application/json" hidden />
       <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
         🌙 Dark mode
       </button>
@@ -23,6 +35,14 @@
       <aside class="color-panel" aria-label="Hex editor panel">
         <div class="selected-hex-row">
           <strong id="selected-hex-label">A1</strong>
+          <input
+            id="hex-name-input"
+            class="hex-name-input"
+            type="text"
+            value=""
+            placeholder="Hex name"
+            aria-label="Hex name"
+          />
         </div>
 
         <input id="hex-color-input" type="text" value="#808080" placeholder="#RRGGBB or rgba(...)" />
@@ -31,14 +51,24 @@
           <textarea
             id="hex-text-input"
             class="hex-textarea"
-            placeholder="Paste multiline text here"
+            placeholder="Event table"
           ></textarea>
 
-          <textarea
-            id="hex-text-input-2"
-            class="hex-textarea"
-            placeholder="Second multiline text"
-          ></textarea>
+          <div class="right-text-stack">
+            <input
+              id="hex-text-input-top"
+              class="hex-textarea hex-short-input"
+              type="text"
+              maxlength="80"
+              placeholder="Opponent"
+              aria-label="Opponent"
+            />
+
+            <div id="hex-text-input-2" class="challenge-box" aria-label="Challenges">
+              <div class="challenge-list"></div>
+              <button class="challenge-add-button" type="button">Add challenge</button>
+            </div>
+          </div>
         </div>
 
         <div class="mana-editor">
